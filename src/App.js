@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
@@ -44,6 +44,7 @@ import './App.css';
           />
           <button type="submit">Search</button>
         </form>
+        
       </div>
     );
   
@@ -60,11 +61,16 @@ import './App.css';
               <img src={forecast.icon} alt={forecast.description} />
             </li>
           </ul>
+          <small>
+     <a href="https://github.com/iyana-wilson/weather-app-react" target="_blank" rel="noreferrer">Open Source Code</a> by Iyana Wilson 
+   </small>
         </div>
       );
     } else {
       return display;
     }
+  
+    
   }
   
 
