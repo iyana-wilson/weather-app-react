@@ -10,6 +10,7 @@ import './App.css';
     const [city, setCity] = useState("");
     const [loaded, setLoaded] = useState(false);
     const [forecast, setForecast] = useState({});
+   
   
     function showWeather(response) {
       setLoaded(true);
@@ -32,9 +33,11 @@ import './App.css';
     function updateCity(event) {
       setCity(event.target.value);
     }
+
   
     let display = (
       <div className="App">
+        <div>
         <h1>Weather Search</h1>
         <form onSubmit={handleSubmit}>
           <input
@@ -44,6 +47,10 @@ import './App.css';
           />
           <button type="submit">Search</button>
         </form>
+        </div>
+        <small>
+         <a href="https://github.com/iyana-wilson/weather-app-react" target="_blank" rel="noreferrer">Open-source Code</a>, coded by Iyana Wilson
+       </small>
         
       </div>
     );
@@ -61,18 +68,15 @@ import './App.css';
               <img src={forecast.icon} alt={forecast.description} />
             </li>
           </ul>
-          <small>
-     <a href="https://github.com/iyana-wilson/weather-app-react" target="_blank" rel="noreferrer">Open Source Code</a> by Iyana Wilson 
-   </small>
+   
         </div>
       );
     } else {
       return display;
     }
   
-    
   }
+
   
-
-
 export default App;
+
